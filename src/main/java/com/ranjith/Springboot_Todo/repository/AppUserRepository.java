@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RestController;
 public interface AppUserRepository extends JpaRepository<AppUser,Integer> {
 
     @Query("FROM AppUser u WHERE u.username =:username AND u.password =:password")
-    AppUser findUserById(@Param("username")String  uname,@Param("password") String pwd);
+    AppUser findUserByName(@Param("username")String  uname,@Param("password") String pwd);
 }

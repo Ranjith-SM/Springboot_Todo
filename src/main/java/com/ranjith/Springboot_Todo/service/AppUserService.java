@@ -15,7 +15,7 @@ public class AppUserService {
     private AppUserRepository appUserRepository;
     public AppUser login(AppUser user) {
 
-        AppUser loggeduser = appUserRepository.findUserById(user.getUsername(),user.getPassword());
+        AppUser loggeduser = appUserRepository.findUserByName(user.getUsername(),user.getPassword());
         return loggeduser;
     }
 
